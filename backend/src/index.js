@@ -4,7 +4,7 @@ const routes = require('./routes');
 
 const app = express();
 
-app.use(Cors());
+//app.use(Cors());
 app.use(express.json());
 app.use(routes);
 

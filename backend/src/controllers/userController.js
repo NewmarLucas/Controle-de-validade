@@ -10,13 +10,13 @@ module.exports = {
 
 async create(request, response) {
 
-    const { name } = request.body;
+    const { username } = request.body;
 
     const id = crypto.randomBytes(4).toString('HEX');
 
     await connection('user').insert({
         id,
-        name,
+        username,
     })
 
     return response.json({ id });

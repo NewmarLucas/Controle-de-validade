@@ -12,7 +12,7 @@ module.exports = {
         .join('user', 'user.id', '=', 'products.user_id')
         .limit(5)
         .offset((page - 1) * 5)
-        .select(['products.*', 'user.name']);
+        .select(['products.*', 'user.username']);
 
         response.header('X-Total-Count', count['count(*)']);
 
